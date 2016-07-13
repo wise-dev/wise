@@ -57,7 +57,7 @@ class User extends BaseUser{
      */
     public function preUpload()
     {
-        if (isset($this->file) && $this->file !== null) {
+        if ($this->file !== null) {
            // do whatever you want to generate a unique name
            $this->image = uniqid().'.'.$this->file->guessExtension();
         }else{
@@ -71,7 +71,7 @@ class User extends BaseUser{
      */
     public function upload()
     {
-        if (isset($this->file) && null === $this->file) {
+        if (null === $this->file) {
             return;
         } 
           // if there is an error when moving the file, an exception will
