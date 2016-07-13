@@ -1,0 +1,4 @@
+services:
+#    wise_profile.example:
+#        class: WiseProfileBundle\Example
+#        arguments: ["@service_id", "plain_value", %parameter%]
