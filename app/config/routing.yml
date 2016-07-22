@@ -1,6 +1,9 @@
-wise_profile:
-    resource: "@WiseProfileBundle/Controller/"
-    type:     annotation
+workflow:
+    resource: "@WorkflowBundle/Resources/config/routing.xml"
+    prefix:   /
+
+profile:
+    resource: "@ProfileBundle/Resources/config/routing.xml"
     prefix:   /
     
 fos_user:

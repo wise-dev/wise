@@ -9,11 +9,11 @@ services:
 #        arguments: ["@another_service_name", "plain_value", "%parameter_name%"]
 
     app.form.registration:
-        class: WiseProfileBundle\Form\RegistrationType
+        class: Wise\ProfileBundle\Form\RegistrationType
         tags:
             - { name: form.type, alias: app_user_registration }
     ap_user.edit.form.type:
-        class: WiseProfileBundle\Form\ProfileType
+        class: Wise\ProfileBundle\Form\ProfileType
         arguments: [%fos_user.model.user.class%]
         tags:
             - { name: form.type, alias: ap_edit_profile }
