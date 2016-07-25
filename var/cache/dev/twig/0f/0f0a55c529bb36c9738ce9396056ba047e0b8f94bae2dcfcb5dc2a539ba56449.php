@@ -15,14 +15,13 @@ class __TwigTemplate_b7389330632010967deaa9d975d2534285fab0f464f35df397e9d4702a9
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_4f8b85c18d893fc431b95e04aa9f6c2659054f267e98a6c7811d2cd79cad8488 = $this->env->getExtension("native_profiler");
-        $__internal_4f8b85c18d893fc431b95e04aa9f6c2659054f267e98a6c7811d2cd79cad8488->enter($__internal_4f8b85c18d893fc431b95e04aa9f6c2659054f267e98a6c7811d2cd79cad8488_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "WorkflowBundle:Default:index.html.twig"));
+        $__internal_807b231f5a3fab3ab440adb2f62b84a6e32f28692d8219843de5b75ab95f2efd = $this->env->getExtension("native_profiler");
+        $__internal_807b231f5a3fab3ab440adb2f62b84a6e32f28692d8219843de5b75ab95f2efd->enter($__internal_807b231f5a3fab3ab440adb2f62b84a6e32f28692d8219843de5b75ab95f2efd_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "WorkflowBundle:Default:index.html.twig"));
 
         // line 1
-        echo "Hello World!
-<span class=\"btn\">test</span>";
+        echo "Hello World!";
         
-        $__internal_4f8b85c18d893fc431b95e04aa9f6c2659054f267e98a6c7811d2cd79cad8488->leave($__internal_4f8b85c18d893fc431b95e04aa9f6c2659054f267e98a6c7811d2cd79cad8488_prof);
+        $__internal_807b231f5a3fab3ab440adb2f62b84a6e32f28692d8219843de5b75ab95f2efd->leave($__internal_807b231f5a3fab3ab440adb2f62b84a6e32f28692d8219843de5b75ab95f2efd_prof);
 
     }
 
@@ -37,4 +36,3 @@ class __TwigTemplate_b7389330632010967deaa9d975d2534285fab0f464f35df397e9d4702a9
     }
 }
 /* Hello World!*/
-/* <span class="btn">test</span>*/
