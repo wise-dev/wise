@@ -4,7 +4,7 @@ fos_user:
     
 profile:
     resource: "@ProfileBundle/Resources/config/routing.xml"
-    prefix:   /profile
+    prefix:   /
 
 workflow:
     resource: "@WorkflowBundle/Resources/config/routing.xml"

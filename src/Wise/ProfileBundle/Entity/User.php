@@ -24,12 +24,13 @@ class User extends BaseUser{
      * @ORM\Column(name="image", type="string", length=255)
      */
     protected $image;
-
+    
     public $file;
 
     public function __construct()
     {
         parent::__construct();
+        $this->file=null;
         // your own logic
     }
      protected function getUploadDir()

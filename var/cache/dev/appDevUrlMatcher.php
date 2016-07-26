@@ -275,27 +275,24 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
-        if (0 === strpos($pathinfo, '/profile')) {
-            // fos_user_change_password
-            if ($pathinfo === '/profile/change-password') {
-                if (!in_array($this->context->getMethod(), array('GET', 'POST', 'HEAD'))) {
-                    $allow = array_merge($allow, array('GET', 'POST', 'HEAD'));
-                    goto not_fos_user_change_password;
-                }
-
-                return array (  '_controller' => 'FOS\\UserBundle\\Controller\\ChangePasswordController::changePasswordAction',  '_route' => 'fos_user_change_password',);
-            }
-            not_fos_user_change_password:
-
-            // profile_homepage
-            if (rtrim($pathinfo, '/') === '/profile') {
-                if (substr($pathinfo, -1) !== '/') {
-                    return $this->redirect($pathinfo.'/', 'profile_homepage');
-                }
-
-                return array (  '_controller' => 'Wise\\ProfileBundle\\Controller\\DefaultController::indexAction',  '_route' => 'profile_homepage',);
+        // fos_user_change_password
+        if ($pathinfo === '/profile/change-password') {
+            if (!in_array($this->context->getMethod(), array('GET', 'POST', 'HEAD'))) {
+                $allow = array_merge($allow, array('GET', 'POST', 'HEAD'));
+                goto not_fos_user_change_password;
             }
 
+            return array (  '_controller' => 'FOS\\UserBundle\\Controller\\ChangePasswordController::changePasswordAction',  '_route' => 'fos_user_change_password',);
+        }
+        not_fos_user_change_password:
+
+        // profile_homepage
+        if (rtrim($pathinfo, '/') === '') {
+            if (substr($pathinfo, -1) !== '/') {
+                return $this->redirect($pathinfo.'/', 'profile_homepage');
+            }
+
+            return array (  '_controller' => 'Wise\\ProfileBundle\\Controller\\DefaultController::indexAction',  '_route' => 'profile_homepage',);
         }
 
         // workflow_homepage
